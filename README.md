@@ -1,7 +1,7 @@
 # My C++ GUI Application
 
 Check the source code files above.  
-Made with wxWidgets, check the online documentationhere: https://www.wxwidgets.org/  
+Made with wxWidgets, check the online documentation here: https://www.wxwidgets.org/  
 The app follows the OOP principles.
 
 ## Download for Windows
