@@ -7,7 +7,7 @@ wxIMPLEMENT_APP(App);
 
 bool App::OnInit()
 { 
-	MainFrame* mainFrame = new MainFrame("C++ GUI");
+	MainFrame* mainFrame = new MainFrame("C++ GUI - v1.1");
 	//mainFrame->SetClientSize(800, 600);
 	mainFrame->SetMinClientSize(wxSize(800, 600));
 	mainFrame->Center();

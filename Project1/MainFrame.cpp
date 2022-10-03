@@ -54,7 +54,9 @@ void MainFrame::StartParty()
 
 void MainFrame::ChooseMode()
 {
+    status->SetBackgroundColour(wxColour(wxNullColour));
 	status->PushStatusText(_T("Mode Selection..."));
+    status->Refresh();
 	wxButton* simple = new wxButton(panel, wxID_ANY, _T("Simple Mode"), wxDefaultPosition, wxSize(200, 70));
 	wxButton* extended = new wxButton(panel, wxID_ANY, _T("Extended Mode"), wxDefaultPosition, wxSize(200, 70));
 	wxBoxSizer* sizer = new wxBoxSizer(wxHORIZONTAL);
@@ -257,12 +259,12 @@ void MainFrame::ExtendedVersion(wxCommandEvent& evt)
 		//controls
 		wxPanel* local_panel = new wxPanel(panel_left);
 		wxSizer* local_sizer_horizontal = new wxBoxSizer(wxHORIZONTAL);
-		wxTextCtrl* name = new wxTextCtrl(local_panel, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(130, -1));
+		wxTextCtrl* name = new wxTextCtrl(local_panel, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(110, -1));
 		name->SetHint("Participant Name...");
 		wxString choices[] = { "Drinker", "Driver", "Party-Pooper" };
-		wxComboBox* mode = new wxComboBox(local_panel, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(80, -1), 3, choices);
+		wxComboBox* mode = new wxComboBox(local_panel, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(99, -1), 3, choices);
 		mode->SetHint("Mode");
-		wxSpinCtrl* exception = new wxSpinCtrl(local_panel, wxID_ANY, _T("BudgetExcpt"), wxDefaultPosition, wxSize(80, -1), wxSP_ARROW_KEYS, 0, 10000);
+		wxSpinCtrl* exception = new wxSpinCtrl(local_panel, wxID_ANY, _T("BudgetException"), wxDefaultPosition, wxSize(115, -1), wxSP_ARROW_KEYS, 0, 10000);
 		//wxTextCtrl* exception = new wxTextCtrl(local_panel, wxID_ANY, wxEmptyString, wxDefaultPosition, wxSize(80, -1));
 		//exception->SetHint("Budget Excpt...");
 		wxButton* del = new wxButton(local_panel, wxID_ANY, _T("Delete"), wxDefaultPosition, wxDefaultSize);
@@ -271,7 +273,7 @@ void MainFrame::ExtendedVersion(wxCommandEvent& evt)
 		local_sizer_horizontal->Add(mode);
 		local_sizer_horizontal->Add(30, -1);
 		local_sizer_horizontal->Add(exception);
-		local_sizer_horizontal->Add(30, -1);
+		local_sizer_horizontal->Add(15, -1);
 		local_sizer_horizontal->Add(del);
 
 		wxSizer* local_sizer_vertical = new wxBoxSizer(wxVERTICAL);

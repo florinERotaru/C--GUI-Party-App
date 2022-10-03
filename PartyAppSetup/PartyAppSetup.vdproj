@@ -110,6 +110,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -563,7 +571,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_790B3EBD836F45A9B241E29B25E0660A"
             {
-            "Name" = "8:app shortcut"
+            "Name" = "8:Party App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -577,7 +585,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B82FD070A0A54CEB943F014B4E792E99"
             {
-            "Name" = "8:app shortcut"
+            "Name" = "8:Party App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
